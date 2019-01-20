@@ -1,8 +1,11 @@
 ---
-layout: default
-title: The Beginning
+title: Blog
 ---
-<div class="blurb">
-	<h1>Hi there, I'm Nic!</h1>
-	<p>You'll only find a few words here...</p>
-</div><!-- /.blurb -->
+<ul>
+    {% for post in site.posts %}
+      <li>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <p>{{ post.excerpt }}</p>
+      </li>
+    {% endfor %}
+  </ul>
